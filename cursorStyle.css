@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.player{
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+}
+.player img{
+    width: 100%;
+    object-fit: cover;  /*해당 줄이 적용되려면 100%값을 줘야.*/
+    filter: drop-shadow(1px 2px 8px #ddd);
+}
+#mouse-pointer{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border-radius: 50%;
+    background-color: #eee;
+    z-index: 1;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transition: transform 0.3s; /*transform 속성에 한해서만 transition 작동*/
+}
+.hover{
+    transform: scale(400%);
+}
